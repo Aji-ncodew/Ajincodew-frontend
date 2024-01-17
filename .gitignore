@@ -9,14 +9,6 @@ lerna-debug.log*
 
 node_modules
 
-# Ignore everything in dist folder except for the folder itself
-dist/*
-!dist/
-
-# dist-ssr
-dist-ssr
-*.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
