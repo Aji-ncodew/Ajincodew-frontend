@@ -1,0 +1,23 @@
+.contact-info, .contact-form {
+    background-color: var(--color-2);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    box-shadow: none !important;
+}
+.contact-form button {
+    background-color: var(--color-8) !important;
+    color: var(--main-text-color) !important;
+    font-weight: bold !important;
+    box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+.contact-form button:hover {
+    background-color: var(--color-9) !important;
+}
+
+.contact-info a {
+    text-decoration: none !important;
+    color: var(--color-9) !important;
+}

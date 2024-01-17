@@ -1,0 +1,16 @@
+#blogs .card {
+    background-color: var(--color-2) !important;
+    height: 100%;
+}
+#blogs .card img {
+    height: 200px;
+    object-fit: cover;
+
+}
+#blogs .tags span {
+    background-color: var(--color-8) !important;
+}
+#blogs .card a {
+    color: var(--color-9) !important;
+    font-size: 20px;
+}
