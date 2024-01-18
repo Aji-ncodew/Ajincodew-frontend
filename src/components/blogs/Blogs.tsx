@@ -2,6 +2,20 @@ import BLOG1_image from "../../assets/fast_api.png";
 
 import "./Blogs.css";
 
+/**
+ * Blogs Component - A React component that displays our blogs.
+ *
+ * @component
+ * @example
+ * // Usage example in another component
+ * import About from './Blogs';
+ *
+ * const App = () => {
+ *   return <Blogs />;
+ * };
+ *
+ * @returns {JSX.Element} The rendered component.
+ */
 function Blogs() {
   const tags=["FastAPI","Microservices","API","Python"]
   const currentDate= new Date().getFullYear();

@@ -8,6 +8,12 @@ function NavBar() {
   const currentPath = location.pathname;
   // const [analytics, setAnalytics] = useState({ visits: 0, views: 0 });
 
+  // function changeVisits() {
+  //   setAnalytics(prevAnalytics => ({
+  //     ...prevAnalytics,
+  //     visits: Number(prevAnalytics.visits) + 1
+  //   }));
+  // }
   return (
     <>
       <a
@@ -21,7 +27,7 @@ function NavBar() {
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark px-3">
         <div className="container-fluid">
           <div className="navbar-brand ms-lg-5">
-            <Link to={"/"} style={{ textDecoration: "none" }}>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
               <img
                 src={AJINCODEW_logo_white_text}
                 alt="AJINCODEW"
@@ -96,7 +102,7 @@ function NavBar() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item ms-lg-2 d-flex align-items-center">
+              <li className="nav-item ms-lg-2 d-flex align-items-center ">
                 <div className="eye-icon">
                   <i className="bi bi-eye-fill"></i>
                   <span> 1 </span>

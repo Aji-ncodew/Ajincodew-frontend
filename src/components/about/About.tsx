@@ -1,9 +1,21 @@
-import "./About.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+/**
+ * About Component - A React component that displays information about the organization.
+ *
+ * @component
+ * @example
+ * // Usage example in another component
+ * import About from './About';
+ *
+ * const App = () => {
+ *   return <About />;
+ * };
+ *
+ * @returns {JSX.Element} The rendered component.
+ */
 function About() {
   return (
     <>
+      {/* About Section */}
       <section className="section about" aria-label="about" id="about">
         <div className="container">
           <h2 className="text-center">About Us</h2>
@@ -13,9 +25,11 @@ function About() {
           >
             We are a Moroccan organization with the mission to empower young Moroccans by providing them with the knowledge and skills needed to excel in programming and information technology. Our commitment is to foster a vibrant tech ecosystem in Morocco and equip our youth with the tools to shape a brighter digital future.
           </p>
+          {/* Q&A Section */}
           <h2 className="text-center">Q&A</h2>
           <div className="container p-3 d-flex justify-content-center">
             <div className="accordion" id="qna">
+              {/* Q&A Item 1 */}
               <div className="accordion-item mb-1">
                 <h2 className="accordion-header">
                   <button
@@ -35,11 +49,11 @@ function About() {
                   data-bs-parent="#qna"
                 >
                   <div className="accordion-body">
-                    We want to spread the IT culture through our campus and
-                    create a safe and motivating environment for IT enthusiasts.
+                    We want to spread the IT culture through our campus and create a safe and motivating environment for IT enthusiasts.
                   </div>
                 </div>
               </div>
+              {/* Q&A Item 2 */}
               <div className="accordion-item mb-1">
                 <h2 className="accordion-header">
                   <button
@@ -63,6 +77,7 @@ function About() {
                   </div>
                 </div>
               </div>
+              {/* Q&A Item 3 */}
               <div className="accordion-item">
                 <h2 className="accordion-header">
                   <button
@@ -82,8 +97,7 @@ function About() {
                   data-bs-parent="#qna"
                 >
                   <div className="accordion-body">
-                    You can sponsor an event or suggest a formation in a topic
-                    of your choice related to IT.
+                    You can sponsor an event or suggest a formation in a topic of your choice related to IT.
                   </div>
                 </div>
               </div>

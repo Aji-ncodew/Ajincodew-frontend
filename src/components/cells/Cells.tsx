@@ -1,6 +1,5 @@
 import visual_data from "../../assets/illustrations/visual_data.png";
 import chat_bot from "../../assets/illustrations/chat_bot.png";
-import server_cluster from "../../assets/illustrations/server_cluster.png";
 import business_deal from "../../assets/illustrations/business_deal.png";
 import conference from "../../assets/illustrations/conference.png";
 import social_media from "../../assets/illustrations/social_media.png";
