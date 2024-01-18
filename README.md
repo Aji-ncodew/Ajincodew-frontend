@@ -4,7 +4,7 @@
 ![Home Image](./demo/courses.jpg)
 
 ## About page
-![About Image](./demo/about.png)
+![About Image](./demo/about.jpg)
 
 ## Blogs page
 ![Blogs Image](./demo/blogs.png)
