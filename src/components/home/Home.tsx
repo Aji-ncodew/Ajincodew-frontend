@@ -13,7 +13,7 @@ function Home() {
             Welcome to <span className="span">AJINCODEW </span>
           </h1>
           <p className="section-text">Where ideas become Reality</p>
-          <Link className="btn" to={"basePath/about"}>
+          <Link className="btn" to={"/about"}>
             Who are we?
           </Link>
         </div>
