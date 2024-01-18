@@ -1,7 +1,7 @@
 # Ajincodew Platform
 
 ## Home page
-![Home Image](./demo/courses.png)
+![Home Image](./demo/home.jpg)
 
 ## About page
 ![About Image](./demo/about.jpg)
@@ -12,11 +12,11 @@
 ## Cells page
 ![Cells Image](./demo/cells.png)
 
-## Contact page
-![Contact Image](./demo/contact.png)
-
 ## Courses page
 ![Courses Image](./demo/courses.png)
+
+## Contact page
+![Contact Image](./demo/contact.png)
 
 
 
