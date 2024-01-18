@@ -1,9 +1,9 @@
-// ShimmerSession.tsx
-import "./Session.css";
+// ShimmerCourse.tsx
+import "./Course.css";
 
-function ShimmerSession() {
+function ShimmerCourse() {
   return (
-    <div className="session card text-center text-light mb-3 shimmerBG">
+    <div className="course card text-center text-light mb-3 shimmerBG">
       {/* Use self-closing tag for img */}
       <img style={{ visibility: "hidden" }} className="card-img-top" alt="Shimmer" />
       <div className="card-body" style={{ visibility: "hidden" }}>
@@ -23,4 +23,4 @@ function ShimmerSession() {
   );
 }
 
-export default ShimmerSession;
+export default ShimmerCourse;

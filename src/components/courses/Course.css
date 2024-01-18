@@ -1,39 +1,39 @@
-.session.card {
+.course.card {
     position: relative;
     background-color: var(--color-2) !important;
     height: 100%;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 }
-.session.card:hover {
+.course.card:hover {
     box-shadow: 0 0 10px var(--color-6) !important;
     transform: scale(1.01);
     transition: all 0.5s ease-in-out;
 }
 
-.session.card img {
+.course.card img {
     height: 220px;
     object-fit: cover;
 }
 
-.session.card .type span {
+.course.card .type span {
     background-color: var(--color-8) !important;
 }
 
-.session .card-body {
+.course .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.session .card-footer a {
+.course .card-footer a {
     background-color: var(--color-6) !important;
     color: var(--main-text-color) !important;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
 }
-.session .card-footer a:hover {
+.course .card-footer a:hover {
     background-color: var(--color-7) !important;
     box-shadow: 0 0 10px var(--color-7) !important;
     transition: all 0.5s ease-in-out;
@@ -57,7 +57,7 @@
     }
 }
 
-.session.shimmerBG {
+.course.shimmerBG {
     animation-duration: 2.2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;

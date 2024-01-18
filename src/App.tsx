@@ -8,7 +8,7 @@ import NotFound from "./components/notfound/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
 import "./App.css";
-import Courses from "./components/projects/Courses";
+import Courses from "./components/courses/Courses";
 
 function App() {
 
