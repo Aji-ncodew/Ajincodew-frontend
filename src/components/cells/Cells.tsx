@@ -5,6 +5,7 @@ import business_deal from "../../assets/illustrations/business_deal.png";
 import conference from "../../assets/illustrations/conference.png";
 import social_media from "../../assets/illustrations/social_media.png";
 import designer from "../../assets/illustrations/designer.png";
+import blogging from "../../assets/illustrations/blogging.png"
 import "./Cells.css";
 
 const cells = [
@@ -26,11 +27,11 @@ const cells = [
   },
   {
     id: 3,
-    name: "Bloging",
+    name: "Blogging",
     icon: "bi bi-infinity",
     description:
       "Sharing compelling content on AJINCODEW's vibrant and dynamic social media platforms, fostering connections and amplifying your message across diverse online communities.",
-    image: server_cluster,
+    image: blogging,
   },
   {
     id: 4,
