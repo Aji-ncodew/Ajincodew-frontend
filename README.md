@@ -1,7 +1,7 @@
 # Ajincodew Platform
 
 ## Home page
-![Home Image](./demo/courses.jpg)
+![Home Image](./demo/courses.png)
 
 ## About page
 ![About Image](./demo/about.jpg)
