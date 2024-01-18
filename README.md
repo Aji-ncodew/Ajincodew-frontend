@@ -6,11 +6,11 @@
 ## About page
 ![About Image](./demo/about.jpg)
 
-## Blogs page
-![Blogs Image](./demo/blogs.png)
-
 ## Cells page
 ![Cells Image](./demo/cells.png)
+
+## Blogs page
+![Blogs Image](./demo/blogs.png)
 
 ## Courses page
 ![Courses Image](./demo/courses.png)
