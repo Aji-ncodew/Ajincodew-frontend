@@ -1,5 +1,4 @@
 // ShimmerSession.tsx
-import React from "react";
 import "./Session.css";
 
 function ShimmerSession() {

@@ -1,5 +1,5 @@
 // Courses.tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ShimmerSession from "./ShimmerSession";
 import Session from "./Session";
 import ProblemSolvingEp1 from "../../assets/courses/ProblemSolvingEp1.jpg"
