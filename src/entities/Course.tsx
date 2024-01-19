@@ -4,8 +4,8 @@ interface CourseEntity {
     type: string;
     title: string;
     speakers: string[];
-    Year: string;
-    Duration: string;
+    year: string;
+    duration: string;
     link: string;
   }
 

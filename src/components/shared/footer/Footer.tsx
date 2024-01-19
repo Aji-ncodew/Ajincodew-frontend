@@ -1,26 +1,24 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import AJINCODEW_text from "../../../assets/AJINCODEW_text.png";
 import AJINCODEW_logo_white from "../../../assets/ajincodew.jpg";
-import "./Footer.css";
+import './Footer.css';
 
 function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="container-fluid">
-      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 text-light">
+      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-3 p-sm-5 text-light">
         <div className="col mb-3 d-flex flex-column align-items-center">
-          <img
-            src={AJINCODEW_logo_white}
-            width="80"
-            alt="AJINCODEW"
-          />
-          <img src={AJINCODEW_text} width="126" alt="AJINCODEW" />
+          <img src={AJINCODEW_logo_white} width="80" alt="AJINCODEW Logo" />
+          <img src={AJINCODEW_text} width="126" alt="AJINCODEW Text" />
         </div>
 
-        <div className="col mb-3">
+        <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-            <h5>AJINCODEW</h5>
+              <h5>Social media</h5>
             </li>
             <div>
               <li className="nav-item mb-2">
@@ -35,21 +33,22 @@ function Footer() {
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com/company/ajincodew/"
-                  className="nav-link p-0 text-light"
-                >
-                  <i className="bi bi-chevron-right"></i> LinkedIn
-                </a>
-              </li>
-              <li className="nav-item mb-2">
-                <a
-                  target="_blank"
                   href="https://www.facebook.com/Ajincodew/"
                   className="nav-link p-0 text-light"
                 >
                   <i className="bi bi-chevron-right"></i> Facebook
                 </a>
               </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/ajincodew/"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> LinkedIn
+                </a>
+              </li>
+            
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
@@ -63,53 +62,54 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col mb-3">
+        <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-            <h5>AJINCODEW</h5>
+              <h5>Useful links</h5>
             </li>
             <div>
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="https://ajincodew.netlify.app/"
+                  href="/about"
                   className="nav-link p-0 text-light"
                 >
-                  <i className="bi bi-chevron-right"></i> Website
+                  <i className="bi bi-chevron-right"></i> About
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="https://www.linkedin.com/company/ajincodew/"
+                  href="/faq"
                   className="nav-link p-0 text-light"
                 >
-                  <i className="bi bi-chevron-right"></i> LinkedIn
+                  <i className="bi bi-chevron-right"></i> FAQ
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="https://www.facebook.com/Ajincodew/"
+                  href="/blogs"
                   className="nav-link p-0 text-light"
                 >
-                  <i className="bi bi-chevron-right"></i> Facebook
+                  <i className="bi bi-chevron-right"></i> Blogs
                 </a>
               </li>
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="https://www.instagram.com/aji_ncodew_/"
+                  href="/courses"
                   className="nav-link p-0 text-light"
                 >
-                  <i className="bi bi-chevron-right"></i> Instagram
+                  <i className="bi bi-chevron-right"></i> Courses
                 </a>
               </li>
             </div>
           </ul>
         </div>
 
-        <div className="col mb-3">
+
+        <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
               <h5>Follow us</h5>
@@ -120,28 +120,28 @@ function Footer() {
                 href="https://www.instagram.com/aji_ncodew_/"
                 className="nav-link p-0 text-light"
               >
-                <i className="bi bi-instagram" style={{ fontSize: "40px" }}></i>
+                <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://www.facebook.com/Ajincodew/"
                 className="nav-link p-0 text-light"
               >
-                <i className="bi bi-facebook" style={{ fontSize: "40px" }}></i>
+                <FontAwesomeIcon icon={faFacebook} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://www.linkedin.com/company/ajincodew/"
                 className="nav-link p-0 text-light"
               >
-                <i className="bi bi-linkedin" style={{ fontSize: "40px" }}></i>
+                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://github.com/Aji-ncodew"
                 className="nav-link p-0 text-light"
               >
-                <i className="bi bi-github" style={{ fontSize: "40px" }}></i>
+                <FontAwesomeIcon icon={faGithub} style={{ fontSize: "40px" }} />
               </a>
             </li>
             <li className="mb-2">
@@ -162,10 +162,12 @@ function Footer() {
       </div>
 
       <div className="footer-bottom text-light">
+        <div className="social-icons">
+          {/* Add social media icons as needed */}
+        </div>
         <div className="copyright d-flex justify-content-center align-items-center py-4 border-top border-dark">
-          <p className="mt-2">
-            &copy; {year} AJINCODEW <i className="bi bi-heart-fill"></i>{" "}
-            All rights reserved.
+          <p className="mt-2 text-center">
+            &copy; {year} AJINCODEW <i className="bi bi-heart-fill"></i> All rights reserved.
           </p>
         </div>
       </div>

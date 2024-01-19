@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
 import "./App.css";
 import Courses from "./components/courses/Courses";
+import Login from "./components/login/Login";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="/courses" element={<Courses />} />
               <Route path="*" element={<NotFound />} />
             </Route>
+            <Route path="/login" element={<Login />} />
           </Routes>
         </ScrollToTop>
       </Router>

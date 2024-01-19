@@ -1,30 +1,49 @@
+import  { useEffect, useState } from "react";
 import AJINCODEW_logo_white_text from "../../../assets/ajincodew.jpg";
-// import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
   const location = useLocation();
   const currentPath = location.pathname;
-  // const [analytics, setAnalytics] = useState({ visits: 0, views: 0 });
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  // function changeVisits() {
-  //   setAnalytics(prevAnalytics => ({
-  //     ...prevAnalytics,
-  //     visits: Number(prevAnalytics.visits) + 1
-  //   }));
-  // }
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the menu is open before closing it
+      if (isMenuOpen) {
+        // Additional condition to prevent closing when scrolling
+        if (window.scrollY === 0) {
+          setMenuOpen(false);
+        }
+      }
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <a
-        className="close-navbar-toggler collapsed"
+        className={`close-navbar-toggler collapsed ${isMenuOpen ? "open" : ""}`}
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
-        aria-expanded="false"
+        aria-expanded={isMenuOpen ? "true" : "false"}
         aria-label="Toggle navigation"
+        onClick={toggleMenu}
       ></a>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark px-3">
+      <nav className={`navbar fixed-top navbar-expand-lg navbar-dark px-3 ${isMenuOpen ? "open" : ""}`}>
         <div className="container-fluid">
           <div className="navbar-brand ms-lg-5">
           <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -100,6 +119,16 @@ function NavBar() {
                   to={"/" + "courses"}
                 >
                   Courses
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={
+                    currentPath == "/login" ? "nav-link active" : "nav-link"
+                  }
+                  to={"/" + "login"}
+                >
+                  Login
                 </Link>
               </li>
               <li className="nav-item">

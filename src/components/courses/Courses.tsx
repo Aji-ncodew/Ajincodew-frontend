@@ -29,8 +29,8 @@ function Courses() {
         course.title.toLowerCase().includes(searchLower) ||
         course.type.toLowerCase().includes(searchLower) ||
         course.speakers.some((speaker) => speaker.toLowerCase().includes(searchLower)) ||
-        course.Duration.toLowerCase().includes(searchLower) ||
-        course.Year.toLowerCase().includes(searchLower)
+        course.duration.toLowerCase().includes(searchLower) ||
+        course.year.toLowerCase().includes(searchLower)
       );
     });
     setFilter(filteredCourses);

@@ -9,7 +9,7 @@ interface FilterProps {
 }
 
 function Filter(props: FilterProps) {
-  const years = props.data.map((course) => course.Year);
+  const years = props.data.map((course) => course.year);
   const uniqueYears = [...new Set(years)];
 
   const [currentYear, setCurrentYear] = useState<string>("");
@@ -25,7 +25,7 @@ function Filter(props: FilterProps) {
     }
 
     if (year !== "") {
-      result = result.filter((course) => course.Year === year);
+      result = result.filter((course) => course.year === year);
     }
 
     props.setter(result);
