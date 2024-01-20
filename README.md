@@ -1,22 +1,27 @@
-# Ajincodew Platform
+# Project Name
 
-## Home page
-![Home Image](./demo/home.jpg)
+Ajincodew plateforme
 
-## About page
-![About Image](./demo/about.jpg)
+## Functional Requirements
 
-## Cells page
-![Cells Image](./demo/cells.png)
+| Functionality          | Status               | Comments                     |
+|------------------------|----------------------|------------------------------|
+| Authentication         | Static: ✔️ Dynamic: ❌ | Static authentication done. |
+| Registration           | Static: ✔️ Dynamic: ❌ | Static registration done.   |
+| Manage Courses         | Static: ✔️ Dynamic: ❌ | Static course management done. |
+| Manage Blogs           | Static: ✔️ Dynamic: ❌ | Static blog management done.   |
+| Manage Cells           | Static: ✔️ Dynamic: ❌ | Static cell management done.   |
+| Graphical Design       | 77% well             | Work in progress.           |
+| Contact                | Static: ✔️ Dynamic: ❌ | Static contact done.        |
+| Technical Design       | Done                 |                              |
 
-## Blogs page
-![Blogs Image](./demo/blogs.png)
+## Note
+- "Static" refers to the implementation of the functionality in a non-dynamic manner.
+- "Dynamic" refers to the implementation of the functionality in a dynamic manner (e.g., real-time updates).
+- The percentage completion for "Graphical Design" is a subjective evaluation.
 
-## Courses page
-![Courses Image](./demo/courses.png)
-
-## Contact page
-![Contact Image](./demo/contact.png)
+## Demo
+https://github.com/Aji-ncodew/frontend/tree/main/demo
 
 
 
