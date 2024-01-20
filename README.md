@@ -6,14 +6,13 @@ Ajincodew plateforme
 
 | Functionality          | Status               | Comments                     |
 |------------------------|----------------------|------------------------------|
+| Technical Design       | Done ✔️              |                              |
 | Authentication         | Static: ✔️ Dynamic: ❌ | Static authentication done. |
 | Registration           | Static: ✔️ Dynamic: ❌ | Static registration done.   |
 | Manage Courses         | Static: ✔️ Dynamic: ❌ | Static course management done. |
 | Manage Blogs           | Static: ✔️ Dynamic: ❌ | Static blog management done.   |
 | Manage Cells           | Static: ✔️ Dynamic: ❌ | Static cell management done.   |
-| Graphical Design       | 77% well             | Work in progress.           |
 | Contact                | Static: ✔️ Dynamic: ❌ | Static contact done.        |
-| Technical Design       | Done                 |                              |
 
 ## Note
 - "Static" refers to the implementation of the functionality in a non-dynamic manner.
