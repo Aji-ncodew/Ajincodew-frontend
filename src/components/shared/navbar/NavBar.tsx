@@ -141,16 +141,7 @@ function NavBar() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className={
-                    currentPath == "/technicalDesign" ? "nav-link active" : "nav-link"
-                  }
-                  to={"https://ajincodew.my.canva.site/"}
-                >
-                  Technical design
-                </Link>
-              </li>
+              
               <li className="nav-item ms-lg-2 d-flex align-items-center ">
                 <div className="eye-icon">
                   <i className="bi bi-eye-fill"></i>

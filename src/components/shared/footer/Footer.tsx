@@ -80,10 +80,10 @@ function Footer() {
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
-                  href="/faq"
+                  href="https://ajincodew.my.canva.site/"
                   className="nav-link p-0 text-light"
                 >
-                  <i className="bi bi-chevron-right"></i> FAQ
+                  <i className="bi bi-chevron-right"></i> Technical design
                 </a>
               </li>
               <li className="nav-item mb-2">
