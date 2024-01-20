@@ -6,7 +6,7 @@ Ajincodew plateforme
 
 | Functionality          | Status               | Comments                     |
 |------------------------|----------------------|------------------------------|
-| Technical Design       | Done ✔️              |                              |
+| Technical Design       | Done ✔️              |  Link : https://ajincodew.my.canva.site/                            |
 | Authentication         | Static: ✔️ Dynamic: ❌ | Static authentication done. |
 | Registration           | Static: ✔️ Dynamic: ❌ | Static registration done.   |
 | Manage Courses         | Static: ✔️ Dynamic: ❌ | Static course management done. |
