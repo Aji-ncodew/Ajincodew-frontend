@@ -26,7 +26,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="*" element={<NotFound />} />
-            </Route>
+            </Route> 
             <Route path="/login" element={<Login />} />
           </Routes>
         </ScrollToTop>
