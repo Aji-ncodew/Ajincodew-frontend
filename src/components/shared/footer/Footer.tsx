@@ -10,15 +10,15 @@ function Footer() {
   return (
     <footer className="container-fluid">
       <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-3 p-sm-5 text-light">
-        <div className="col mb-3 d-flex flex-column align-items-center">
-          <img src={AJINCODEW_logo_white} width="80" alt="AJINCODEW Logo" />
+        <div className="col  mb-3 d-flex flex-column align-items-center">
+          <img src={AJINCODEW_logo_white} width="80" alt="AJINCODEW Logo"className='spec' />
           <img src={AJINCODEW_text} width="126" alt="AJINCODEW Text" />
         </div>
 
         <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-              <h5>Social media</h5>
+            <h5  className="title">Social media</h5>
             </li>
             <div>
               <li className="nav-item mb-2">
@@ -65,7 +65,7 @@ function Footer() {
         <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-              <h5>Useful links</h5>
+              <h5 className="title">Useful links</h5>
             </li>
             <div>
               <li className="nav-item mb-2">
