@@ -4,9 +4,10 @@ import AJINCODEW_text from "../../../assets/AJINCODEW_text.png";
 import AJINCODEW_logo_white from "../../../assets/ajincodew.jpg";
 import './Footer.css';
 
+
 function Footer() {
   const year = new Date().getFullYear();
-
+  
   return (
     <footer className="container-fluid">
       <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-3 p-sm-5 text-light">
@@ -14,9 +15,9 @@ function Footer() {
           <img src={AJINCODEW_logo_white} width="80" alt="AJINCODEW Logo"className='spec' />
           <img src={AJINCODEW_text} width="126" alt="AJINCODEW Text" />
         </div>
-
-        <div className="col mb-3 sm-6">
-          <ul className="nav flex-column align-items-center">
+        
+        <div className="col mb-3 sm-6 ">
+          <ul className="nav flex-column align-items-center ">
             <li className="mb-2">
             <h5  className="title">Social media</h5>
             </li>
@@ -62,12 +63,12 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col mb-3 sm-6">
+        <div className="col mb-3 sm-6 " >
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
               <h5 className="title">Useful links</h5>
             </li>
-            <div>
+            <div style={{ marginLeft: '40px' }} >
               <li className="nav-item mb-2">
                 <a
                   target="_blank"
@@ -107,45 +108,43 @@ function Footer() {
             </div>
           </ul>
         </div>
-
-
         <div className="col mb-3 sm-6">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-              <h5>Follow us</h5>
+              <h5 className='title'>Follow us</h5>
             </li>
-            <li className="nav-item mb-3 d-flex justify-content-center align-items-center gap-2">
+            <li className="nav-item mb-3 d-flex justify-content-center align-items-center gap-2 ">
               <a
                 target="_blank"
                 href="https://www.instagram.com/aji_ncodew_/"
-                className="nav-link p-0 text-light"
+                className="nav-link p-0 text-light someSpace "
               >
                 <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://www.facebook.com/Ajincodew/"
-                className="nav-link p-0 text-light"
+                className="nav-link p-0 text-light someSpace "
               >
                 <FontAwesomeIcon icon={faFacebook} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://www.linkedin.com/company/ajincodew/"
-                className="nav-link p-0 text-light"
+                className="nav-link p-0 text-light someSpace"
               >
                 <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "40px" }} />
               </a>
               <a
                 target="_blank"
                 href="https://github.com/Aji-ncodew"
-                className="nav-link p-0 text-light"
+                className="nav-link p-0 text-light "
               >
                 <FontAwesomeIcon icon={faGithub} style={{ fontSize: "40px" }} />
               </a>
             </li>
             <li className="mb-2">
-              <h5>Contact Details</h5>
+              <h5 className='title'>Contact Details</h5>
             </li>
             <li className="nav-item mb-2">
               <a href="mailto:ajincodew@gmail.com">
