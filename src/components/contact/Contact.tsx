@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,  ChangeEvent } from "react";
 import "./Contact.css";
 import * as emailjs from 'emailjs-com';
 function Contact() {
@@ -27,14 +27,14 @@ function Contact() {
     message: ''
   });
   const { name, email, message } = formData;
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value
     });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const templateParams = {
       name: name,
