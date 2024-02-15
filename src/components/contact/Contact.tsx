@@ -69,8 +69,16 @@ function Contact() {
         }
       );
 
-    e.target.reset();
+    resetForm()
   };
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
+
 
   return (
     <>
