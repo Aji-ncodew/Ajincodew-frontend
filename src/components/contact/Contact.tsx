@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState ,  ChangeEvent } from "react";
 import "./Contact.css";
-
+import * as emailjs from 'emailjs-com';
 function Contact() {
-  const [submitted/*, setSubmitted*/] = useState(false);
-  const [success/*, setSuccess*/] = useState(false);
-  const [failure/*, setFailure*/] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
   /*const handleSubmit = (e: any) => {
     setSubmitted(true);
@@ -21,10 +21,68 @@ function Contact() {
       message,
     };
   };*/
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const { name, email, message } = formData;
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const templateParams = {
+      name: name,
+      email: email,
+      to_name: '/*YOUR NAME OR COMPANY*/',
+      message: message
+    };
+   
+
+    emailjs.send(
+        "service_o8zj5mg",
+        "template_suzxx8i",
+        templateParams,
+        "9Xv2J4N48aW9CUDLK"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSubmitted(true);
+          setSuccess(true);
+          setTimeout(() => {
+            setSuccess(false);
+          }, 3000);
+        },
+        (error) => {
+          console.log(error.text);
+          setSubmitted(true);
+          setFailure(true);
+          setTimeout(() => {
+            setFailure(false);
+          }, 3000);
+        }
+      );
+
+    resetForm()
+  };
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
+
 
   return (
     <>
-      <section className="section contact" aria-label="contact" id="contact">
+    <section className="section contact" aria-label="contact" id="contact">
         <div className="container">
           <div className="title-wrapper">
             <h2
@@ -72,7 +130,7 @@ function Contact() {
                   className="form-wrapper"
                   name="contact-form"
                   method="POST"
-                  // onSubmit={handleSubmit}
+                  onSubmit={handleSubmit}
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
@@ -82,6 +140,9 @@ function Contact() {
                       type="text"
                       name="name"
                       placeholder="Full Name"
+                      value={name}
+                      onChange={handleChange}
+
                       required
                     />
                   </div>
@@ -91,6 +152,8 @@ function Contact() {
                       type="email"
                       name="email"
                       placeholder="Email"
+                      value={email}
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -99,7 +162,9 @@ function Contact() {
                       className="form-control"
                       name="message"
                       placeholder="Message"
-                      defaultValue={""}
+                      //defaultValue={""}
+                      value={message}
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -180,6 +245,9 @@ function Contact() {
         </div>
       </section>
     </>
+    
+    
+      
   );
 }
 
