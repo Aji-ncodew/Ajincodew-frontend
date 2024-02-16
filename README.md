@@ -23,7 +23,7 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
 
 ## Documentation
 
-- **Technical Architecture:** ![Technical Architecture Diagram](./docs/architecture/)
+- **Technical Architecture:** [Technical Architecture Diagram](./docs/architecture/)
 
 - **Class Diagrams:** [Class Diagrams](./docs/class_diagram/)
 
