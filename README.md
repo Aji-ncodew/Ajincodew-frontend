@@ -9,7 +9,7 @@
   </a>
 </p>
 <h1 align="center">
-  Ajincodew Trainings
+  Ajincodew plateform (Frontend)
 </h1>
 
 Ajincodew is an Moroccan organization with the mission to empower young Moroccans by providing them with the knowledge and skills needed to excel in programming and information technology. Our commitment is to foster a vibrant tech ecosystem in Morocco and equip our youth with the tools to shape a brighter digital future.
