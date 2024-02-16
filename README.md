@@ -25,11 +25,11 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
 
 - **Technical Architecture:** ![Technical Architecture Diagram](./assets/technical_architecture.jpg)
 
-- **Class Diagrams:** ![Class Diagrams](./docs/uml/class_diagram/)
+- **Class Diagrams:** [Class Diagrams](./docs/uml/class_diagram/)
 
-- **Use Case Diagram:** ![Use Case Diagram](./docs/uml/use_case_diagram/)
+- **Use Case Diagram:** [Use Case Diagram](./docs/uml/use_case_diagram/)
 
-- **Prototype:** ![Prototype](./docs/uml/prototype)
+- **Prototype:** [Prototype](./docs/uml/prototype)
 
 
 ## Contributors ✨
