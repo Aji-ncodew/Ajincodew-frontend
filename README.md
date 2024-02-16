@@ -31,8 +31,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="20%"><a href="https://taffah-achraf.netlify.app"><img src="./assets/achraf-taffah.jpg" width="180px;" alt="Achraf TAFFAH"/><br /><sub><b>Achraf TAFFAH</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=TAFFAHACHRAF" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=yjose" title="Documentation">📖</a> <a href="#content-TAFFAHACHRAF" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3ATAFFAHACHRAF" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://taffah-achraf.netlify.app"><img src="https://avatars.githubusercontent.com/u/99338171?v=4" width="180px;" alt="Achraf TAFFAH"/><br /><sub><b>Achraf TAFFAH</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=TAFFAHACHRAF" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=yjose" title="Documentation">📖</a> <a href="#content-TAFFAHACHRAF" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3ATAFFAHACHRAF" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href=""><img src="https://avatars.githubusercontent.com/u/149275715?v=4" width="180px;" alt="Mohamed Amine ALLALI"/><br /><sub><b>Mohamed Amine ALLALI</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=Mohamed-Yuta" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=Mohamed-Yuta" title="Documentation">📖</a> <a href="#content-Mohamed-Yuta" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3AMohamed-Yuta" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href=""><img src="https://avatars.githubusercontent.com/u/95369539?v=4" width="180px;" alt="Zakia REGOUG"/><br /><sub><b>Zakia REGOUG</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=Zakia-Regoug" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=Zakia-Regoug" title="Documentation">📖</a> <a href="#content-Zakia-Regoug" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3AZakia-Regoug" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
-
