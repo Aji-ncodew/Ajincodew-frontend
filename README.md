@@ -21,6 +21,17 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
     ```sh
     git clone https://github.com/Aji-ncodew/Trainings
 
+## Documentation
+
+- **Technical Architecture:** ![Technical Architecture Diagram](./assets/technical_architecture.jpg)
+
+- **Class Diagrams:** ![Class Diagrams](./docs/uml/class_diagram/)
+
+- **Use Case Diagram:** ![Use Case Diagram](./docs/uml/use_case_diagram/)
+
+- **Prototype:** ![Prototype](./docs/uml/prototype)
+
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
