@@ -32,6 +32,12 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
 - **Prototype:** [Prototype](./demo)
 
 
+## Technologies 
+
+<p align="center">
+  <img alt="Technologies" src="./assets/Technologies.jpg" width="800" />
+</p>
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
