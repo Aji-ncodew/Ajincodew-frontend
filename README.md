@@ -19,7 +19,7 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
 1.  **Fork and clone the project**
 
     ```sh
-    git clone https://github.com/Aji-ncodew/Trainings
+    git clone https://github.com/Aji-ncodew/Ajincodew-frontend
 
 ## Documentation
 
