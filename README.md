@@ -5,7 +5,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <p align="center">
   <a href="https://ajincodew.netlify.app">
-    <img alt="Gatsby" src="./assets/ajincodew.jpg" width="200" />
+    <img alt="Gatsby" src="./assets/logos/ajincodew.jpg" width="200" />
   </a>
 </p>
 <h1 align="center">
@@ -25,11 +25,11 @@ Ajincodew is an Moroccan organization with the mission to empower young Moroccan
 
 - **Technical Architecture:** ![Technical Architecture Diagram](./assets/technical_architecture.jpg)
 
-- **Class Diagrams:** [Class Diagrams](./docs/uml/class_diagram/)
+- **Class Diagrams:** [Class Diagrams](./docs/class_diagram/)
 
-- **Use Case Diagram:** [Use Case Diagram](./docs/uml/use_case_diagram/)
+- **Use Case Diagram:** [Use Case Diagram](./docs/use_case/)
 
-- **Prototype:** [Prototype](./docs/uml/prototype)
+- **Prototype:** [Prototype](./demo)
 
 
 ## Contributors ✨
