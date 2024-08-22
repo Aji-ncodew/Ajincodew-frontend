@@ -6,33 +6,60 @@ interface Course {
   src: string;
   title: string;
   description: string;
+  link: string
 }
 
 
-const initialCourses: Course[] | null = []
-// [
-//   {
-//     src: "/next.jpg",
-//     title: "Modern Next.js Portfolio",
-//     description: "A modern portfolio built with Next.js.",
-//   },
-//   {
-//     src: "/next.jpg",
-//     title: "Interactive Website Cards",
-//     description: "Interactive cards for a website using CSS and JavaScript.",
-//   },
-//   {
-//     src: "/next.jpg",
-//     title: "Space Themed Website",
-//     description: "A space-themed website designed with CSS animations.",
-//   },
-//   // Add more Courses here to ensure you have at least 10 items
-// ];
+const initialCourses: Course[] | null = 
+[
+  {
+    src: "/backend roadmap.svg",
+    title: "Backend developer roadmap - Bdarija",
+    description: "Backend developer roadmap - Bdarija By Achraf TAFFAH",
+    link: "https://www.youtube.com/watch?v=PR3le-m_HL0&t=36s"
+  },
+  {
+    src: "/digital banking project.svg",
+    title: "Digital Banking Project (Spring boot, Angular) - En francais",
+    description: "Digital Banking Project (Spring boot, Angular) - En francais By Achraf TAFFAH",
+    link: "https://www.youtube.com/watch?v=dKdhWgTAstA&t=5s"
+  },
+  {
+    src: "/drupal project.svg",
+    title: "Projet CMS DRUPAL - En français",
+    description: "Projet CMS DRUPAL - En français By Achraf TAFFAH",
+    link: "https://www.youtube.com/watch?v=DuMX5UOq6VY&t=6s"
+  },
+  {
+    src: "/laravel 1.svg",
+    title: "Laravel From Scratch [Part 1] - Bdarija",
+    description: "Laravel From Scratch [Part 1] - Bdarija By Zakia Regoug",
+    link: "https://www.youtube.com/watch?v=QSgOcXb-GZs&t=54s"
+  },
+  {
+    src: "/laravel 2.svg",
+    title: `Laravel From Scratch [Part 2] - Bdarija`,
+    description: "Laravel From Scratch [Part 2] - Bdarija By Zakia Regoug",
+    link: "https://www.youtube.com/watch?v=9r-JhfvHDMA&t=9s"
+  },
+  {
+    src: "/problem solving 1.svg",
+    title: "Problem solving [Part 1] - Bdarija",
+    description: "Problem solving [Part 1] - Bdarija By Achraf TAFFAH",
+    link: "https://www.youtube.com/watch?v=jLT_cKI28aU&t=59s"
+  },
+  {
+    src: "/problem solving 2.svg",
+    title: "Problem solving [Part 2] - Bdarija",
+    description: "Problem solving [Part 2] - Bdarija By Achraf TAFFAH",
+    link: "https://www.youtube.com/watch?v=X32NQ3v8la4&t=32s"
+  }
+];
 
 export default function Courses({ params }: { params: any }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const CoursesPerPage = 10; // 10 items per page
+  const CoursesPerPage = 6; // 10 items per page
 
   useEffect(() => {
     const fullUrl = window.location.href;
@@ -77,15 +104,17 @@ export default function Courses({ params }: { params: any }) {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 w-full px-10">
         {currentCourses.length > 0 ? (
           currentCourses.map((Course, index) => (
-            <CourseCard
+            <a href={Course.link}>
+              <CourseCard
               key={index}
               src={Course.src}
               title={Course.title}
               description={Course.description}
-            />
+              />
+            </a>
           ))
         ) : (
           <p className="text-gray-500 text-center col-span-2">No courses found.</p>
