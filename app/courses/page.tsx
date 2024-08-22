@@ -1,15 +1,15 @@
 "use client";
-import PodcastCard from "@/components/sub/PodcastCard";
+import CourseCard from "@/components/sub/CourseCard";
 import React, { useState, useEffect } from "react";
 
-interface Project {
+interface Course {
   src: string;
   title: string;
   description: string;
 }
 
 
-const initialProjects: Project[] | null = []
+const initialCourses: Course[] | null = []
 // [
 //   {
 //     src: "/next.jpg",
@@ -26,13 +26,13 @@ const initialProjects: Project[] | null = []
 //     title: "Space Themed Website",
 //     description: "A space-themed website designed with CSS animations.",
 //   },
-//   // Add more projects here to ensure you have at least 10 items
+//   // Add more Courses here to ensure you have at least 10 items
 // ];
 
-export default function Projects({ params }: { params: any }) {
+export default function Courses({ params }: { params: any }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 10; // 10 items per page
+  const CoursesPerPage = 10; // 10 items per page
 
   useEffect(() => {
     const fullUrl = window.location.href;
@@ -40,19 +40,19 @@ export default function Projects({ params }: { params: any }) {
     console.log(lastSegment);
   }, []);
 
-  const filteredProjects = (initialProjects ?? []).filter(
-    (project) =>
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredCourses = (initialCourses ?? []).filter(
+    (Course) =>
+      Course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      Course.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
   
 
   // Pagination logic
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = filteredProjects.slice(
-    indexOfFirstProject,
-    indexOfLastProject
+  const indexOfLastCourse = currentPage * CoursesPerPage;
+  const indexOfFirstCourse = indexOfLastCourse - CoursesPerPage;
+  const currentCourses = filteredCourses.slice(
+    indexOfFirstCourse,
+    indexOfLastCourse
   );
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -60,17 +60,17 @@ export default function Projects({ params }: { params: any }) {
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
-      id="projects"
+      id="Courses"
       style={{ userSelect: "text" }}
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        Podcasts
+        Courses
       </h1>
 
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
-          placeholder="Search podcasts..."
+          placeholder="Search Courses..."
           className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -78,24 +78,24 @@ export default function Projects({ params }: { params: any }) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full px-10">
-        {currentProjects.length > 0 ? (
-          currentProjects.map((project, index) => (
-            <PodcastCard
+        {currentCourses.length > 0 ? (
+          currentCourses.map((Course, index) => (
+            <CourseCard
               key={index}
-              src={project.src}
-              title={project.title}
-              description={project.description}
+              src={Course.src}
+              title={Course.title}
+              description={Course.description}
             />
           ))
         ) : (
-          <p className="text-gray-500 text-center col-span-2">No podcasts found.</p>
+          <p className="text-gray-500 text-center col-span-2">No courses found.</p>
         )}
       </div>
 
       {/* Pagination */}
       <div className="flex space-x-2 mt-8">
         {Array.from(
-          { length: Math.ceil(filteredProjects.length / projectsPerPage) },
+          { length: Math.ceil(filteredCourses.length / CoursesPerPage) },
           (_, i) => (
             <button
               key={i + 1}

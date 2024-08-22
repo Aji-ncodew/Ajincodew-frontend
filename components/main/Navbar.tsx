@@ -63,12 +63,6 @@ const Navbar = () => {
               Podcasts
             </a>
             <a
-              href="/lives"
-              className={`cursor-pointer ${activeLink === "lives" ? "text-blue-500" : ""}`}
-            >
-              Lives
-            </a>
-            <a
               href="/courses"
               className={`cursor-pointer ${activeLink === "courses" ? "text-blue-500" : ""}`}
             >

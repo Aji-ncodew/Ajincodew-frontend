@@ -7,7 +7,7 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
-import { FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -18,33 +18,33 @@ const Footer = () => {
 
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Community</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://www.youtube.com/@aji_ncodew">
                         <FaYoutube />
                         <span className="text-[15px] ml-[6px]">Youtube</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    </a>
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://github.com/Aji-ncodew">
                         <RxGithubLogo />
                         <span className="text-[15px] ml-[6px]">Github</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    </a>
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://discord.gg/4FP9Ek4F">
                         <RxDiscordLogo />
                         <span className="text-[15px] ml-[6px]">Discord</span>    
-                    </p>
+                    </a>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Social Media</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://www.instagram.com/ajincodew_/">
+                        <FaInstagram />
                         <span className="text-[15px] ml-[6px]">Instagram</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
+                    </a>
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://web.facebook.com/Ajincodew">
+                        <FaFacebook />
+                        <span className="text-[15px] ml-[6px]">Facebook</span>    
+                    </a>
+                    <a className="flex flex-row items-center my-[15px] cursor-pointer" href="https://www.linkedin.com/company/ajincodew2024/?viewAsMember=true">
                         <RxDiscordLogo />
                         <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
+                    </a>
                 </div>
                 <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">About</div>
@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
 
             <div className="mb-[20px] text-[15px] text-center">
-                &copy; WebChain Dev 2023 Inc. All rights reserved
+                &copy; Ajincodew 2024 Inc. All rights reserved
             </div>
         </div>
     </div>

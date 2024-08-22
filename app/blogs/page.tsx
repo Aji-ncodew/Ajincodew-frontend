@@ -1,15 +1,15 @@
 "use client";
-import PodcastCard from "@/components/sub/PodcastCard";
+import BlogCard from "@/components/sub/BlogCard";
 import React, { useState, useEffect } from "react";
 
-interface Project {
+interface Blog {
   src: string;
   title: string;
   description: string;
 }
 
 
-const initialProjects: Project[] | null = []
+const initialBlogs: Blog[] | null = []
 // [
 //   {
 //     src: "/next.jpg",
@@ -26,13 +26,13 @@ const initialProjects: Project[] | null = []
 //     title: "Space Themed Website",
 //     description: "A space-themed website designed with CSS animations.",
 //   },
-//   // Add more projects here to ensure you have at least 10 items
+//   // Add more Blogs here to ensure you have at least 10 items
 // ];
 
-export default function Projects({ params }: { params: any }) {
+export default function Blogs({ params }: { params: any }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 10; // 10 items per page
+  const BlogsPerPage = 10; // 10 items per page
 
   useEffect(() => {
     const fullUrl = window.location.href;
@@ -40,19 +40,19 @@ export default function Projects({ params }: { params: any }) {
     console.log(lastSegment);
   }, []);
 
-  const filteredProjects = (initialProjects ?? []).filter(
-    (project) =>
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredBlogs = (initialBlogs ?? []).filter(
+    (Blog) =>
+      Blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      Blog.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
   
 
   // Pagination logic
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = filteredProjects.slice(
-    indexOfFirstProject,
-    indexOfLastProject
+  const indexOfLastBlog = currentPage * BlogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - BlogsPerPage;
+  const currentBlogs = filteredBlogs.slice(
+    indexOfFirstBlog,
+    indexOfLastBlog
   );
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
@@ -60,17 +60,17 @@ export default function Projects({ params }: { params: any }) {
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
-      id="projects"
+      id="Blogs"
       style={{ userSelect: "text" }}
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        Podcasts
+        Blogs
       </h1>
 
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
-          placeholder="Search podcasts..."
+          placeholder="Search Blogs..."
           className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -78,24 +78,24 @@ export default function Projects({ params }: { params: any }) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full px-10">
-        {currentProjects.length > 0 ? (
-          currentProjects.map((project, index) => (
-            <PodcastCard
+        {currentBlogs.length > 0 ? (
+          currentBlogs.map((Blog, index) => (
+            <BlogCard
               key={index}
-              src={project.src}
-              title={project.title}
-              description={project.description}
+              src={Blog.src}
+              title={Blog.title}
+              description={Blog.description}
             />
           ))
         ) : (
-          <p className="text-gray-500 text-center col-span-2">No podcasts found.</p>
+          <p className="text-gray-500 text-center col-span-2">No Blogs found.</p>
         )}
       </div>
 
       {/* Pagination */}
       <div className="flex space-x-2 mt-8">
         {Array.from(
-          { length: Math.ceil(filteredProjects.length / projectsPerPage) },
+          { length: Math.ceil(filteredBlogs.length / BlogsPerPage) },
           (_, i) => (
             <button
               key={i + 1}

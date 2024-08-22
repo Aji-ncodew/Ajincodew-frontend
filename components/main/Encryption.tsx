@@ -1,68 +1,78 @@
 "use client";
 import React from "react";
-
 import { motion } from "framer-motion";
-import { slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
+import { slideInFromTop } from "@/utils/motion";
+// import Facebook from "/facebook.svg";
+// import Twitter from "/facebook.svg";
+// import Youtube from "/facebook.svg";
+// import Rss from "/facebook.svg";
 
-const Encryption = () => {
+const NotificationSection = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
-      <div className="absolute w-auto h-auto top-0 z-[5]">
-        <motion.div
-          variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
-        >
-          Performance
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-            {" "}
-            &{" "}
-          </span>
-          Security
-        </motion.div>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen w-full h-full">
+      <motion.div
+        variants={slideInFromTop}
+        className="text-[40px] font-medium text-center text-gray-200 my-8"
+      >
+        Stay Updated with
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          {" "}Our IT Community
+        </span>
+      </motion.div>
 
-      <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
-        <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
-          <Image
-            src="/LockTop.png"
-            alt="Lock top"
-            width={50}
-            height={50}
-            className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
-          />
-          <Image
-            src="/LockMain.png"
-            alt="Lock Main"
-            width={70}
-            height={70}
-            className=" z-10"
-          />
+      <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-8 max-w-lg w-full">
+        <h1 className="text-2xl font-semibold mb-4">Get Notified</h1>
+        <p className="text-gray-700 mb-6 text-center">
+          Subscribe to our channels to stay updated on the latest podcasts, courses, and blogs. Enable notifications so you never miss out!
+        </p>
+
+        <div className="flex justify-around w-full mb-6">
+          <a
+            href="http://facebook.com/yourpage"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/facebook.svg" alt="Facebook" height={38} width={38} />
+          </a>
+          <a
+            href="http://twitter.com/yourpage"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/facebook.svg" alt="Twitter" height={50} width={50} />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/yourchannel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/facebook.svg" alt="YouTube" height={50} width={50} />
+          </a>
+          <a
+            href="http://yourwebsite.com/rss.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src="/facebook.svg" alt="RSS" height={30} width={30} />
+          </a>
         </div>
 
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
-        </div>
-      </div>
-      <div className="absolute z-[20] bottom-[10px] px-[5px]">
-        <div className="cursive text-[20px] font-medium text-center text-gray-300">
-          Secure your data with end-to-end encryption
-        </div>
-      </div>
-
-      <div className="w-full flex items-start justify-center absolute">
-        <video
-          loop
-          muted
-          autoPlay
-          playsInline
-          preload="false"
-          className="w-full h-auto"
-          src="/encryption.webm/"
-        />
+        <p className="text-gray-700 text-center">
+          Or subscribe to our{" "}
+          <a
+            href="https://yournewsletter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-500 underline"
+          >
+            Mailing List
+          </a>{" "}
+          to receive updates directly to your inbox.
+        </p>
       </div>
     </div>
   );
 };
 
-export default Encryption;
+export default NotificationSection;
