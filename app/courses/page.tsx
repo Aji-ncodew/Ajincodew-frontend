@@ -72,7 +72,6 @@ export default function Courses({ params }: { params: any }) {
       Course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       Course.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  
 
   // Pagination logic
   const indexOfLastCourse = currentPage * CoursesPerPage;
@@ -107,12 +106,11 @@ export default function Courses({ params }: { params: any }) {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 w-full px-10">
         {currentCourses.length > 0 ? (
           currentCourses.map((Course, index) => (
-            <a href={Course.link}>
+            <a key={index} href={Course.link}>
               <CourseCard
-              key={index}
-              src={Course.src}
-              title={Course.title}
-              description={Course.description}
+                src={Course.src}
+                title={Course.title}
+                description={Course.description}
               />
             </a>
           ))
