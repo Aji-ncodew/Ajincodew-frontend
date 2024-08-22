@@ -1,61 +1,36 @@
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<p align="center">
-  <a href="https://ajincodew.netlify.app">
-    <img alt="Gatsby" src="./assets/logos/ajincodew.jpg" width="200" />
-  </a>
-</p>
-<h1 align="center">
-  Ajincodew plateform (Frontend)
-</h1>
+## Getting Started
 
-Ajincodew is an Moroccan organization with the mission to empower young Moroccans by providing them with the knowledge and skills needed to excel in programming and information technology. Our commitment is to foster a vibrant tech ecosystem in Morocco and equip our youth with the tools to shape a brighter digital future.
+First, run the development server:
 
-## 🚀 Quick start
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-1.  **Fork and clone the frontend**
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-    ```sh
-    git clone https://github.com/Aji-ncodew/Ajincodew-frontend
-    
-2.  **Fork and clone the backend**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-    ```sh
-    git clone https://github.com/Aji-ncodew/Ajincodew-backend
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Documentation
+## Learn More
 
-- **Technical Architecture:** [Technical Architecture Diagram](./docs/architecture/)
+To learn more about Next.js, take a look at the following resources:
 
-- **Class Diagrams:** [Class Diagrams](./docs/class_diagram/)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Use Case Diagram:** [Use Case Diagram](./docs/use_case/)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-- **Prototype:** [Prototype](./demo)
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Technologies 
-
-<p align="center">
-  <img alt="Technologies" src="./assets/Technologies.png" width="800" />
-</p>
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="20%"><a href="https://taffah-achraf.netlify.app"><img src="https://avatars.githubusercontent.com/u/99338171?v=4" width="180px;" alt="Achraf TAFFAH"/><br /><sub><b>Achraf TAFFAH</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=TAFFAHACHRAF" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=yjose" title="Documentation">📖</a> <a href="#content-TAFFAHACHRAF" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3ATAFFAHACHRAF" title="Reviewed Pull Requests">👀</a></td>
-      <td align="center" valign="top" width="20%"><a href=""><img src="https://avatars.githubusercontent.com/u/149275715?v=4" width="180px;" alt="Mohamed Amine ALLALI"/><br /><sub><b>Mohamed Amine ALLALI</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=Mohamed-Yuta" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=Mohamed-Yuta" title="Documentation">📖</a> <a href="#content-Mohamed-Yuta" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3AMohamed-Yuta" title="Reviewed Pull Requests">👀</a></td>
-      <td align="center" valign="top" width="20%"><a href=""><img src="https://avatars.githubusercontent.com/u/95369539?v=4" width="180px;" alt="Zakia REGOUG"/><br /><sub><b>Zakia REGOUG</b></sub></a><br /><a href="https://github.com/Aji-ncodew/trainings/commits?author=Zakia-Regoug" title="Code">💻</a> <a href="https://github.com/Aji-ncodew/trainings/commits?author=Zakia-Regoug" title="Documentation">📖</a> <a href="#content-Zakia-Regoug" title="Content">🖋</a> <a href="https://github.com/Aji-ncodew/trainings/pulls?q=is%3Apr+reviewed-by%3AZakia-Regoug" title="Reviewed Pull Requests">👀</a></td>
-    </tr>
-  </tbody>
-</table>
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
