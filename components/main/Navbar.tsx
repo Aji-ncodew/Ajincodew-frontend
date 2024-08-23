@@ -1,41 +1,33 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Socials } from "@/constants";
 import Image from "next/image";
 import React from "react";
-import { useEffect } from "react";
-
 
 const Navbar = () => {
-  
-  // State to keep track of the active link
   const [activeLink, setActiveLink] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to handle link click
-  const handleClick = (link:any) => {
+  const handleClick = (link: string) => {
     setActiveLink(link);
+    setIsMenuOpen(false); // Close menu after clicking a link
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
-    // Get the full URL
     const fullUrl = window.location.href;
-
-    // Extract the last segment after the final '/'
     const lastSegment = fullUrl.substring(fullUrl.lastIndexOf('/') + 1);
-
-    // Log the last segment
-    console.log(lastSegment);
     setActiveLink(lastSegment);
-  }, []); 
+  }, []);
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          href="/"
-          className="h-auto w-auto flex flex-row items-center"
-        >
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
+      <div className="w-full h-full flex items-center justify-between">
+        <a href="/" className="flex items-center">
           <Image
             src="/ajincodew.png"
             alt="logo"
@@ -43,41 +35,59 @@ const Navbar = () => {
             height={40}
             className="cursor-pointer hover:animate-slowspin"
           />
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
+          <span className="font-bold ml-2 hidden md:block text-gray-300">
             Ajincodew
           </span>
         </a>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a
-              href="/"
-              className={`cursor-pointer ${activeLink === "" ? "text-blue-500" : ""}`}
-            >
-              Home
-            </a>
-            <a
-              href="/podcasts"
-              className={`cursor-pointer ${activeLink === "podcasts" ? "text-blue-500" : ""}`}
-            >
-              Podcasts
-            </a>
-            <a
-              href="/courses"
-              className={`cursor-pointer ${activeLink === "courses" ? "text-blue-500" : ""}`}
-            >
-              Courses
-            </a>
-            <a
-              href="/blogs"
-              className={`cursor-pointer ${activeLink === "blogs" ? "text-blue-500" : ""}`}
-            >
-              Blogs
-            </a>
-          </div>
+        {/* Dropdown Menu Button for Mobile */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-300 focus:outline-none"
+          >
+            ☰
+          </button>
         </div>
 
-        <div className="flex flex-row gap-5">
+        {/* Menu Links */}
+        <div
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } md:flex flex-col md:flex-row md:items-center md:justify-end absolute md:relative top-[65px] md:top-0 right-0 md:right-auto bg-[#0300145e] md:bg-transparent w-full md:w-auto p-4 md:p-0 border-b-2 md:border-none`}
+        >
+          <a
+            href="/"
+            onClick={() => handleClick("")}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "" ? "text-blue-500" : "text-gray-300"}`}
+          >
+            Home
+          </a>
+          <a
+            href="/podcasts"
+            onClick={() => handleClick("podcasts")}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "podcasts" ? "text-blue-500" : "text-gray-300"}`}
+          >
+            Podcasts
+          </a>
+          <a
+            href="/courses"
+            onClick={() => handleClick("courses")}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "courses" ? "text-blue-500" : "text-gray-300"}`}
+          >
+            Courses
+          </a>
+          <a
+            href="/blogs"
+            onClick={() => handleClick("blogs")}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "blogs" ? "text-blue-500" : "text-gray-300"}`}
+          >
+            Blogs
+          </a>
+        </div>
+
+        {/* Social Icons */}
+        <div className="hidden md:flex flex-row gap-4 md:gap-5">
           {Socials.map((social) => (
             <Image
               src={social.src}
@@ -85,6 +95,7 @@ const Navbar = () => {
               key={social.name}
               width={24}
               height={24}
+              className="cursor-pointer"
             />
           ))}
         </div>
