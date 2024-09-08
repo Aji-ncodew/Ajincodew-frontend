@@ -1,42 +1,35 @@
-"use client";
+"use client"
 
-import PodcastCard from "@/components/sub/PodcastCard";
 import React, { useState, useEffect } from "react";
+import PodcastCard from "@/components/sub/PodcastCard";
 
 interface Project {
-  videoUrl: string; // Updated from src to videoUrl
+  videoUrl: string;
   title: string;
   description: string;
+  totalCarsNumber: number;
 }
 
 const initialProjects: Project[] = [
   {
-    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw?si=ooe7ETB6vhyptuLs", // Embed URL format
-    title: "1",
+    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw",
+    title: "Podcast Episode 1",
     description: "This is a description for a sample podcast episode.",
+    totalCarsNumber: 0
   },
   {
-    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc?si=1bGr6Z1nKUj0_Cen", // Replace with a valid video ID
-    title: "Another Podcast Episode",
+    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc",
+    title: "Podcast Episode 2",
     description: "This is a description for another podcast episode.",
+    totalCarsNumber: 0
   },
-  {
-    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw?si=ooe7ETB6vhyptuLs", // Embed URL format
-    title: "1",
-    description: "This is a description for a sample podcast episode.",
-  },
-  {
-    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc?si=1bGr6Z1nKUj0_Cen", // Replace with a valid video ID
-    title: "Another Podcast Episode",
-    description: "This is a description for another podcast episode.",
-  }
+  // Add more projects here as needed
 ];
 
-
-export default function Projects({ params }: { params: any }) {
+export default function Projects() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 10; // 10 items per page
+  const projectsPerPage = 10;
 
   useEffect(() => {
     const fullUrl = window.location.href;
@@ -60,6 +53,11 @@ export default function Projects({ params }: { params: any }) {
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
+  // Determine the container style based on the number of projects
+  const containerStyle = currentProjects.length === 1
+    ? "flex justify-center"
+    : "grid gap-10 w-full px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2";
+
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
@@ -80,7 +78,12 @@ export default function Projects({ params }: { params: any }) {
         />
       </div>
 
-      <div className="grid grid-cols-4 sm:grid-cols-3 gap-10 w-full px-10">
+      <div
+        className={`${
+          currentProjects.length === 1 ? "flex justify-center" : "grid"
+        } ${containerStyle}`}
+        style={{ width: currentProjects.length === 1 ? '80%' : '100%' }} // Set container width based on number of results
+      >
         {currentProjects.length > 0 ? (
           currentProjects.map((project, index) => (
             <PodcastCard
@@ -88,10 +91,11 @@ export default function Projects({ params }: { params: any }) {
               videoUrl={project.videoUrl}
               title={project.title}
               description={project.description}
+              totalCarsNumber={currentProjects.length} // Pass the length for consistent card behavior
             />
           ))
         ) : (
-          <p className="text-gray-500 text-center col-span-2">No podcasts found.</p>
+          <p className="text-gray-500 text-center col-span-1">No podcasts found.</p>
         )}
       </div>
 
