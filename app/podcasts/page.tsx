@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import PodcastCard from "@/components/sub/PodcastCard";
@@ -12,21 +12,36 @@ interface Project {
 
 const initialProjects: Project[] = [
   {
-    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw",
-    title: "Podcast Episode 1",
-    description: "This is a description for a sample podcast episode.",
+    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc",
+    title: "AJI NDWIW PODCAST - Next.js - بالدارجة المغربية",
+    description: "17 618 vues  Diffusée en direct le 24 août 2024  AJI NDWIW",
     totalCarsNumber: 0
   },
   {
-    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc",
-    title: "Podcast Episode 2",
-    description: "This is a description for another podcast episode.",
+    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw",
+    title: "AJI NDWIW PODCAST - DevOps - بالدارجة المغربية",
+    description: "585 vues  Diffusée en direct le 6 sept. 2024  AJI NDWIW",
     totalCarsNumber: 0
   },
-  // Add more projects here as needed
 ];
 
 export default function Projects() {
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    // Function to check for mobile view based on screen width
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // You can adjust this value to suit your needs
+    };
+
+    // Set initial value and add resize event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 10;
@@ -54,9 +69,10 @@ export default function Projects() {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   // Determine the container style based on the number of projects
-  const containerStyle = currentProjects.length === 1
-    ? "flex justify-center"
-    : "grid gap-10 w-full px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2";
+  const containerStyle =
+    currentProjects.length === 1
+      ? "flex justify-center"
+      : "grid gap-10 w-full px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2";
 
   return (
     <div
@@ -80,9 +96,9 @@ export default function Projects() {
 
       <div
         className={`${
-          currentProjects.length === 1 ? "flex justify-center" : "grid"
+          currentProjects.length === 1 ? "flex justify-center text-align-center" : "grid"
         } ${containerStyle}`}
-        style={{ width: currentProjects.length === 1 ? '80%' : '100%' }} // Set container width based on number of results
+        style={{ width: currentProjects.length === 1 ? "80%" : "80%" }} 
       >
         {currentProjects.length > 0 ? (
           currentProjects.map((project, index) => (
@@ -95,7 +111,12 @@ export default function Projects() {
             />
           ))
         ) : (
-          <p className="text-gray-500 text-center col-span-1">No podcasts found.</p>
+          <div
+            className="flex items-center justify-center w-full h-48"
+            style={{ marginLeft: !isMobileView ? "50%" : "0" }}
+          >
+            <p className="text-gray-500 text-center">No podcasts found.</p>
+          </div>
         )}
       </div>
 
