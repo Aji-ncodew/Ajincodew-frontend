@@ -1,33 +1,37 @@
 "use client";
+
 import PodcastCard from "@/components/sub/PodcastCard";
 import React, { useState, useEffect } from "react";
 
 interface Project {
-  src: string;
+  videoUrl: string; // Updated from src to videoUrl
   title: string;
   description: string;
 }
 
+const initialProjects: Project[] = [
+  {
+    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw?si=ooe7ETB6vhyptuLs", // Embed URL format
+    title: "1",
+    description: "This is a description for a sample podcast episode.",
+  },
+  {
+    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc?si=1bGr6Z1nKUj0_Cen", // Replace with a valid video ID
+    title: "Another Podcast Episode",
+    description: "This is a description for another podcast episode.",
+  },
+  {
+    videoUrl: "https://www.youtube.com/embed/QgFZJ0FXiqw?si=ooe7ETB6vhyptuLs", // Embed URL format
+    title: "1",
+    description: "This is a description for a sample podcast episode.",
+  },
+  {
+    videoUrl: "https://www.youtube.com/embed/yi_k8Z-oFIc?si=1bGr6Z1nKUj0_Cen", // Replace with a valid video ID
+    title: "Another Podcast Episode",
+    description: "This is a description for another podcast episode.",
+  }
+];
 
-const initialProjects: Project[] | null = []
-// [
-//   {
-//     src: "/next.jpg",
-//     title: "Modern Next.js Portfolio",
-//     description: "A modern portfolio built with Next.js.",
-//   },
-//   {
-//     src: "/next.jpg",
-//     title: "Interactive Website Cards",
-//     description: "Interactive cards for a website using CSS and JavaScript.",
-//   },
-//   {
-//     src: "/next.jpg",
-//     title: "Space Themed Website",
-//     description: "A space-themed website designed with CSS animations.",
-//   },
-//   // Add more projects here to ensure you have at least 10 items
-// ];
 
 export default function Projects({ params }: { params: any }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,7 +49,6 @@ export default function Projects({ params }: { params: any }) {
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  
 
   // Pagination logic
   const indexOfLastProject = currentPage * projectsPerPage;
@@ -77,12 +80,12 @@ export default function Projects({ params }: { params: any }) {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full px-10">
+      <div className="grid grid-cols-4 sm:grid-cols-3 gap-10 w-full px-10">
         {currentProjects.length > 0 ? (
           currentProjects.map((project, index) => (
             <PodcastCard
               key={index}
-              src={project.src}
+              videoUrl={project.videoUrl}
               title={project.title}
               description={project.description}
             />
