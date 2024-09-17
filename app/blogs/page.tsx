@@ -63,13 +63,14 @@ export default function Blogs({ params }: { params: any }) {
       id="Blogs"
       style={{ userSelect: "text" }}
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00e701] to-[#00e701] py-20">
         Blogs
       </h1>
 
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
+          style={{color:'black'}}
           placeholder="Search Blogs..."
           className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           value={searchQuery}

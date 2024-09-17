@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ajincodew",
   description: "This is Ajincodew community platform",
+  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({

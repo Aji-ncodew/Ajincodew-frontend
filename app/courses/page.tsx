@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import PodcastCard from "@/components/sub/PodcastCard";
+import { color } from "framer-motion";
 
 interface Project {
   videoUrl: string;
@@ -90,7 +91,7 @@ export default function Projects() {
   const containerStyle =
     currentProjects.length === 1
       ? "flex justify-center"
-      : "grid gap-10 w-full px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2";
+      : "grid gap-10 w-full px-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
 
   return (
     <div
@@ -98,13 +99,14 @@ export default function Projects() {
       id="projects"
       style={{ userSelect: "text" }}
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00e701] to-[#00e701] py-20">
         Podcasts
       </h1>
 
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
+          style={{color:'black'}}
           placeholder="Search podcasts..."
           className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           value={searchQuery}
@@ -116,7 +118,7 @@ export default function Projects() {
         className={`${
           currentProjects.length === 1 ? "flex justify-center text-align-center" : "grid"
         } ${containerStyle}`}
-        style={{ width: currentProjects.length === 1 ? "80%" : "80%" }} 
+        style={{ width: currentProjects.length === 1 ? "90%" : "90%" }} 
       >
         {currentProjects.length > 0 ? (
           currentProjects.map((project, index) => (
@@ -125,7 +127,7 @@ export default function Projects() {
               videoUrl={project.videoUrl}
               title={project.title}
               description={project.description}
-              totalCarsNumber={currentProjects.length} // Pass the length for consistent card behavior
+              totalCarsNumber={currentProjects.length} 
             />
           ))
         ) : (
@@ -148,8 +150,8 @@ export default function Projects() {
               onClick={() => paginate(i + 1)}
               className={`px-3 py-1 border rounded ${
                 currentPage === i + 1
-                  ? "bg-purple-500 text-white"
-                  : "bg-white text-purple-500"
+                  ? "bg-[#00e701] text-white border-[#00e701]"
+                  : "bg-white text-[#00e701] border-[#00e701]"
               }`}
             >
               {i + 1}

@@ -86,6 +86,7 @@ export default function Projects() {
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
+          style={{color:'black'}}
           placeholder="Search podcasts..."
           className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           value={searchQuery}
