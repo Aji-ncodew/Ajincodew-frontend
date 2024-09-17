@@ -80,10 +80,9 @@ export default function Projects() {
       id="projects"
       style={{ userSelect: "text" }}
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        Podcasts
-      </h1>
-
+    <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#00e701] to-[#00e701] py-20">
+      Podcasts
+    </h1>
       <div className="w-full max-w-md mb-8">
         <input
           type="text"
@@ -107,7 +106,7 @@ export default function Projects() {
               videoUrl={project.videoUrl}
               title={project.title}
               description={project.description}
-              totalCarsNumber={currentProjects.length} // Pass the length for consistent card behavior
+              totalCarsNumber={currentProjects.length} 
             />
           ))
         ) : (
@@ -130,8 +129,8 @@ export default function Projects() {
               onClick={() => paginate(i + 1)}
               className={`px-3 py-1 border rounded ${
                 currentPage === i + 1
-                  ? "bg-purple-500 text-white"
-                  : "bg-white text-purple-500"
+                  ? "bg-[#00e701] text-white border-[#00e701]"
+                  : "bg-white text-[#00e701] border-[#00e701]"
               }`}
             >
               {i + 1}
@@ -139,6 +138,7 @@ export default function Projects() {
           )
         )}
       </div>
+
     </div>
   );
 }

@@ -17,41 +17,40 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-row items-center justify-center px-6 md:px-20 mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
-      <motion.div
+        <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box py-4 px-6 border border-[#474f54] opacity-90"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[13px]">
+          <SparklesIcon className="text-[#00e701] mr-3 h-5 w-5" />
+          <h1 className="Welcome-text text-2xl font-bold">
             The latest tech trends, in Darija!
           </h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-6 text-4xl md:text-6xl font-bold text-[#00e701] max-w-[600px] w-auto h-auto"
         >
           <span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-white to-green-500">
-              {" "}
-              Moroccan{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00e701] via-[#00e701] to-[#474f54]">
+              Moroccan
             </span>
-            IT community.
+            {" "} IT community.
           </span>
         </motion.div>
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-lg text-gray-300 my-5 max-w-[600px]"
         >
           Ajincodew is an organization dedicated to empowering young Moroccans in the tech industry.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 px-4 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] text-lg font-semibold"
         >
           Learn More!
         </motion.a>
@@ -61,17 +60,14 @@ const HeroContent = () => {
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center"
       >
-      <Image
+        <Image
           src="/mainIconsdark.svg"
           alt="work icons"
           height={650}
           width={650}
         />
-
       </motion.div>
-      
     </motion.div>
-    
   );
 };
 

@@ -10,7 +10,7 @@ interface Props {
 const PodcastCard = ({ videoUrl, title, description, totalCarsNumber }: Props) => {
   return (
     <div
-      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] bg-gray-900"
+      className="relative overflow-hidden rounded-lg shadow-lg border border-[#00e701] bg-gray-900"
       style={{ width: totalCarsNumber <= 1 ? '60%' : '100%' }} // Adjust width based on totalCarsNumber
     >
       {/* Container for video */}

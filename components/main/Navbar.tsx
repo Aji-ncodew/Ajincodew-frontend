@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleClick = (link: string) => {
     setActiveLink(link);
-    setIsMenuOpen(false); // Close menu after clicking a link
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -25,17 +25,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-4 md:px-10">
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#474f54]/50 bg-[#24272c] backdrop-blur-md z-50 px-4 md:px-10">
       <div className="w-full h-full flex items-center justify-between">
         <a href="/" className="flex items-center">
           <Image
-            src="/ajincodew.png"
+            src="/ajincodew-logo-3.svg"
             alt="logo"
             width={40}
             height={40}
             className="cursor-pointer hover:animate-slowspin"
           />
-          <span className="font-bold ml-2 hidden md:block text-gray-300">
+          <span className="font-bold ml-2 hidden md:block text-[white]">
             Ajincodew
           </span>
         </a>
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
-            className="text-gray-300 focus:outline-none"
+            className="text-[#00e701] focus:outline-none"
           >
             ☰
           </button>
@@ -54,33 +54,41 @@ const Navbar = () => {
         <div
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row md:items-center md:justify-end absolute md:relative top-[65px] md:top-0 right-0 md:right-auto bg-[#0300145e] md:bg-transparent w-full md:w-auto p-4 md:p-0 border-b-2 md:border-none`}
+          } md:flex flex-col md:flex-row md:items-center md:justify-end absolute md:relative top-[65px] md:top-0 right-0 md:right-auto bg-[#24272c] md:bg-transparent w-full md:w-auto p-4 md:p-0 border-b-2 md:border-none border-[#474f54]`}
         >
           <a
             href="/"
             onClick={() => handleClick("")}
-            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "" ? "text-blue-500" : "text-gray-300"}`}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${
+              activeLink === "" ? "text-[#00e701]" : "text-gray-300"
+            }`}
           >
             Home
           </a>
           <a
             href="/podcasts"
             onClick={() => handleClick("podcasts")}
-            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "podcasts" ? "text-blue-500" : "text-gray-300"}`}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${
+              activeLink === "podcasts" ? "text-[#00e701]" : "text-gray-300"
+            }`}
           >
             Podcasts
           </a>
           <a
             href="/courses"
             onClick={() => handleClick("courses")}
-            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "courses" ? "text-blue-500" : "text-gray-300"}`}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${
+              activeLink === "courses" ? "text-[#00e701]" : "text-gray-300"
+            }`}
           >
             Courses
           </a>
           <a
             href="/blogs"
             onClick={() => handleClick("blogs")}
-            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${activeLink === "blogs" ? "text-blue-500" : "text-gray-300"}`}
+            className={`cursor-pointer py-2 md:py-0 px-4 md:px-2 ${
+              activeLink === "blogs" ? "text-[#00e701]" : "text-gray-300"
+            }`}
           >
             Blogs
           </a>

@@ -8,13 +8,13 @@ import {
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
+import './skills.css'
 
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20"
-      style={{ transform: "scale(0.9" }}
+      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20 bg-[#0b0e0f] text-white"
     >
       <SkillText />
 
@@ -75,18 +75,16 @@ const Skills = () => {
         ))}
       </div>
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-auto"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src="/cards-video.webm"
-          />
-        </div>
+      <div className="w-full h-full absolute top-0 left-0 z-[-10] opacity-30 flex items-center justify-center bg-cover">
+        <video
+          className="w-full h-full object-cover"
+          preload="false"
+          playsInline
+          loop
+          muted
+          autoPlay
+          src="/cards-video.webm"
+        />
       </div>
     </section>
   );
