@@ -8,7 +8,6 @@ import {
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
-import './skills.css'
 
 const Skills = () => {
   return (
