@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ajincodew.io
+
+# Sitemaps
+Sitemap: https://www.ajincodew.io/sitemap.xml
